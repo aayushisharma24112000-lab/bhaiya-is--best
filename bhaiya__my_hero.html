@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Raj, My Hero</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Comic Sans MS', cursive, sans-serif;
+            background: linear-gradient(to right, #ff758c, #ff7eb3);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            text-align: center;
+            color: white;
+        }
+        .container {
+            background: rgba(255,255,255,0.15);
+            padding: 40px;
+            border-radius: 25px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+        }
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 30px;
+            animation: bounce 2s infinite;
+        }
+        button {
+            padding: 15px 30px;
+            font-size: 1.2em;
+            border: none;
+            border-radius: 15px;
+            margin: 10px;
+            cursor: pointer;
+            transition: 0.3s;
+            color: #ff3377;
+            font-weight: bold;
+        }
+        button:hover {
+            transform: scale(1.1);
+        }
+        .yes {
+            background-color: #fffacd;
+        }
+        .no {
+            background-color: #ff6961;
+        }
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-15px); }
+        }
+        .response {
+            margin-top: 30px;
+            font-size: 1.5em;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h1>Raj 😎</h1>
+    <p>Do you think you are the BEST brother ever? 💖</p>
+    <button class="yes" onclick="yesResponse()">Yes 😍</button>
+    <button class="no" onclick="noResponse()">No 😅</button>
+    <div class="response" id="response"></div>
+</div>
+<script>
+    function yesResponse() {
+        const msg = document.getElementById("response");
+        msg.style.display = "block";
+        msg.innerHTML = "Yayyy! I KNEW IT! Raj, you’re my superhero brother! 💙💖 Love you forever!";
+    }
+    function noResponse() {
+        const msg = document.getElementById("response");
+        msg.style.display = "block";
+        msg.innerHTML = "😲 WHAT?! Impossible! Raj, you are still my amazing brother and my superhero! 💪💙";
+    }
+</script>
+</body>
+</html>
